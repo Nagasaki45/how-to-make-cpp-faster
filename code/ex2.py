@@ -1,22 +1,16 @@
-import math
-import random
-
-from numba import jit
+import numpy as np
 
 ITERATIONS = 1e8
 
 
-@jit
 def price(iterations, S, K, r, v, T, is_call):
-    accumulator = 0;
-    for _ in range(iterations):
-        x = random.gauss(0, 1)
-        datum = S * math.exp((r - 0.5 * v * v) * T + v * math.sqrt(T) * x)
-        if is_call:
-            accumulator += max(datum - K, 0.0);
-        else:
-            accumulator += max(K - datum, 0.0);
-    return math.exp(-r * T) * accumulator / iterations;
+    x = np.random.normal(0, 1, int(iterations))
+    data = S * np.exp((r - 0.5 * v * v) * T + v * np.sqrt(T) * x) - K
+    if is_call:
+        total = data[data > 0].sum()
+    else:
+        total = -data[data < 0].sum()
+    return np.exp(-r * T) * total / iterations
 
 
 # Some constants
