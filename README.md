@@ -9,7 +9,7 @@ You heard that right. This repo propuses two two challanges:
 
 ## "What???"
 
-Don't underestimate python, and don't think that implementation algorithms in python means writing a lot of slow `for` loops.
+Don't underestimate python, and don't think that implementing an algorithms in python means writing a lot of slow `for` loops.
 The scientific ecosystem around python is huge and relatively easy to use.
 Optimizing python code by vecotizing it with [numpy](http://www.numpy.org/) or [pandas](http://pandas.pydata.org/), or JIT compiling it with [numba](http://numba.pydata.org/) will drastically improve performance, and these are only few of the available options.
 
@@ -28,7 +28,7 @@ Some execution time results
 
 ## "But this is not python"
 
-Is it is! That's true that your code will start to call lower level routines in lower level and faster languages. But as a user, who cares?
+Yes it is! That's true that your code will start to call lower level routines in lower level and faster languages. But as a user, who cares?
 
 ## Some context
 
@@ -37,4 +37,4 @@ Just for the exercise I tried to code some of the examples in python, only to fi
 But I want to improve.
 I want to be able to write C++ code that will beat python in performace.
 This is the main porpuse of this repo.
-Which me luck :-)
+Wish me luck :-)
